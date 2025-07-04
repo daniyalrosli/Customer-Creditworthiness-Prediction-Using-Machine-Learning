@@ -1,34 +1,64 @@
-Creditworthiness Prediction Model
+# Customer Creditworthiness Prediction Using Machine Learning
 
-This repository contains a machine learning project that predicts a customer’s creditworthiness based on financial behavior, transaction history, and demographic features. The model helps financial institutions assess the risk associated with customer lending and make more informed credit decisions.
+## Overview
+This project provides a machine learning solution to predict a customer's creditworthiness based on financial behavior, transaction history, and demographic features. The model assists financial institutions in assessing lending risk and making informed credit decisions.
 
-Project Overview
+## Features
+- **Data Preprocessing:** Handles missing values, encodes categorical variables, and normalizes data.
+- **Feature Engineering:** Creates new features from transaction history and aggregates key financial metrics.
+- **Imbalanced Data Handling:** Uses SMOTE to address class imbalance.
+- **Model Building:** Trains a Random Forest classifier (and other algorithms) to classify customers as creditworthy or not.
+- **Model Evaluation:** Assesses performance using accuracy, precision, recall, F1-score, ROC-AUC, confusion matrix, and feature importance.
+- **Hyperparameter Tuning:** Optimizes models using GridSearchCV.
+- **Visualization & EDA:** Provides exploratory data analysis and visualizations to understand trends and relationships.
+- **Interactive Dashboard:** Streamlit app for data exploration, model evaluation, and making predictions.
 
-In this project, we develop a classification model that predicts whether a customer is creditworthy or not, using features such as loan types, missed payments, demographic information, and other financial behavior indicators. The project involves the following key steps:
+## Tech Stack
+- **Programming Language:** Python
+- **Libraries:**
+  - Data Manipulation: `pandas`, `numpy`
+  - Data Visualization: `matplotlib`, `seaborn`, `plotly`
+  - Machine Learning: `scikit-learn`, `imblearn` (SMOTE)
+  - Model Deployment: `streamlit`
 
-- Data Preprocessing: Handling missing values, encoding categorical variables, and normalizing data.
-- Feature Engineering: Creating new features from transaction history and aggregating key financial metrics.
-- Model Building: Training a machine learning model using Random Forest and other algorithms to classify customers as creditworthy or not.
-- Model Evaluation: Assessing the model’s performance using metrics such as accuracy, precision, recall, F1-score, and ROC-AUC.
-- Hyperparameter Tuning: Using GridSearchCV to optimize the model for better performance.
-- Visualization: Exploratory data analysis and visualizations to understand the trends and relationships between variables.
+## Project Structure
+- `credit.py` — Main Streamlit dashboard for interactive analysis and prediction
+- `credit.ipynb` — Jupyter notebook for exploratory data analysis and model development
+- `credit_risk_dataset.csv` — Main dataset
+- `dataset/` — Additional data or resources
 
-Features:
+## Setup & Installation
+1. **Clone the repository:**
+   ```bash
+   git clone <repo-url>
+   cd Customer-Creditworthiness-Prediction-Using-Machine-Learning
+   ```
+2. **(Recommended) Create a virtual environment:**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install pandas numpy scikit-learn imbalanced-learn matplotlib seaborn plotly streamlit
+   ```
 
-- Data Preprocessing: Includes handling missing values and encoding categorical variables such as marital status and education level.
-- Imbalanced Data Handling: Uses SMOTE to address class imbalance in the creditworthiness dataset.
-- Model Training: Implements Random Forest classifier, with hyperparameter tuning using GridSearchCV.
-- Evaluation Metrics: Provides detailed performance metrics like confusion matrix, ROC-AUC, and feature importance.
-- Exploratory Data Analysis (EDA): Visualizes data distributions, correlations, and relationships between variables and creditworthiness.
+## Usage
+### 1. Run the Streamlit Dashboard
+```bash
+streamlit run credit.py
+```
+- Navigate through the dashboard to explore data, analyze features, evaluate model performance, and make predictions.
 
-Tech Stack:
+### 2. Run the Jupyter Notebook
+Open `credit.ipynb` in JupyterLab or VSCode to review the exploratory data analysis and model development process.
 
-- Programming Language: Python
+## Example
+- Predict customer creditworthiness by uploading or using the provided dataset.
+- Visualize feature importance and model performance metrics interactively.
 
-  Libraries:
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for improvements or bug fixes.
 
-- Data Manipulation: Pandas, NumPy
-- Data Visualization: Matplotlib, Seaborn
-- Machine Learning: Scikit-learn, RandomForestClassifier, SMOTE
-- Hyperparameter Tuning: GridSearchCV
-- Model Evaluation: Confusion Matrix, ROC-AUC
+## License
+See `dataset/license.txt` for dataset license. Project code is provided under the MIT License (add a LICENSE file if needed).
